@@ -38,3 +38,17 @@
     text-shadow: .5rem 1rem 2rem rgba($color-black, 0.5);
   }
 }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  &:not(:last-child){
+    margin-bottom: 2rem;
+  }
+}
