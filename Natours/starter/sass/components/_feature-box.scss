@@ -1,0 +1,39 @@
+.section-features{
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -13rem;
+  background-image: linear-gradient(to right bottom,
+          rgba($color-primary-light, 0.8),
+          rgba($color-primary-dark, 0.8)), url("../../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-10deg);
+
+  .row {
+    transform: skewY(10deg);
+  }
+
+  .feature-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+    transition: all 0.3s;
+
+    &__icon {
+      font-size: 3rem;
+      margin-bottom: .5rem;
+      color: $color-primary-dark;
+    }
+
+    &:hover {
+      transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
+}
