@@ -494,6 +494,63 @@ body {
     padding-top: 1rem;
     font-size: 1.2rem; }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    display: inline-block;
+    line-height: 1;
+    transform: scale(3); }
+  .popup__content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    background-color: #fff;
+    height: 30rem;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    display: table;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .5s; }
+  .popup__left {
+    width: 33.33%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.66%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2rem 2rem; }
+  .popup__img {
+    width: 100%; }
+  .popup__text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../../img/hero.jpg");
