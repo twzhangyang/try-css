@@ -2,8 +2,16 @@
   max-width: 114rem;
   margin: 0 auto;
 
+  @include respond(tab-port){
+    max-width: 70rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port){
+      margin-bottom: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -11,9 +19,19 @@
   [class^="col-"] {
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port){
+        margin-right: 0;
+        margin-bottom: $gutter-vertical;
+      }
     }
 
     float: left;
+
+    @include respond(tab-port){
+      width: 100% !important;
+      max-width: 80rem;
+    }
   }
 
   .col-1-of-2 {
